@@ -59,5 +59,5 @@ app.use(( error, request, response, next ) => { // always have to use this patte
   response.json({ name, email, password })
 }) */
 
-const PORT = 3333; // telling the express where/how to communicate 
+const PORT = process.env.PORT || 3333; // telling the express where/how to communicate 
 app.listen(PORT, () => console.log(`Server is running on Port ${PORT}`)); // Awaiting for requisition
